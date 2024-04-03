@@ -38,4 +38,4 @@ modules:
     sources:
       - type: git
         url: https://notabug.org/AstroImpact/AstroImpact.git
-        commit: 62378bd7e11b6fb7c634120b37704c833c7baf11
+        commit: 414d793a73dcbe5b644fea4083385068ae725ea8
