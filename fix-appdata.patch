@@ -1,0 +1,64 @@
+From 0547b8dc766a8935b139b2ed23f514233b28fb99 Mon Sep 17 00:00:00 2001
+From: Sabri Ünal <yakushabb@gmail.com>
+Date: Sun, 8 Mar 2026 02:24:26 +0300
+Subject: [PATCH] Fix appdata paper cuts
+
+---
+ flat/astroimpact.appdata.xml | 27 ++++++++++++++++++++-------
+ 1 file changed, 20 insertions(+), 7 deletions(-)
+
+diff --git a/flat/astroimpact.appdata.xml b/flat/astroimpact.appdata.xml
+index c707875..9c5d3fe 100644
+--- a/flat/astroimpact.appdata.xml
++++ b/flat/astroimpact.appdata.xml
+@@ -1,12 +1,13 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+-<application>
+-	<id type="desktop">astroimpact.desktop</id>
++<component type="desktop-application">
++	<id>astroimpact.desktop</id>
+ 	<metadata_license>CC-BY-4.0</metadata_license>
+ 	<project_license>GPL-3.0</project_license>
+ 	<name>AstroImpact</name>
+ 	<summary>A multi-player space game, defend the planet from the incoming asteroids!</summary>
+ 	<description>
+-		<p>Play with friends online to defend the planet! Longest time to first impact or longest time to 100% damage. You destroy asteroids by flying into them before they hit the planet!</p>
++		<p>Play with friends online to defend the planet! Longest time to first impact or longest time
++    to 100% damage. You destroy asteroids by flying into them before they hit the planet!</p>
+ 		<ul>
+ 			<li>Escape to free mouse lock.</li>
+ 			<li>Use W,A,S,D,Q,E,SPACE &amp; LEFT SHIFT to move around.</li>
+@@ -18,13 +19,25 @@
+ 		</ul>
+ 	</description>
+ 	<screenshots>
+-		<screenshot>https://us.v-cdn.net/6030874/uploads/editor/tc/709u56crzud5.png</screenshot>
+-		<screenshot>https://us.v-cdn.net/6030874/uploads/editor/qt/6vwxxn05aklb.png</screenshot>
+-		<screenshot>https://us.v-cdn.net/6030874/uploads/editor/aa/ubn8tqbf6irz.png</screenshot>
++		<screenshot type="default">
++      <image>https://us.v-cdn.net/6030874/uploads/editor/tc/709u56crzud5.png</image>
++    </screenshot>
++		<screenshot>
++      <image>https://us.v-cdn.net/6030874/uploads/editor/qt/6vwxxn05aklb.png</image>
++    </screenshot>
++		<screenshot>
++      <image>https://us.v-cdn.net/6030874/uploads/editor/aa/ubn8tqbf6irz.png</image>
++    </screenshot>
+ 	</screenshots>
+ 	<url type="homepage">https://github.com/mrbid/AstroImpact</url>
++	<url type="bugtracker">https://github.com/mrbid/AstroImpact/issues</url>
++	<url type="vcs-browser">https://github.com/mrbid/AstroImpact</url>
++  <launchable type="desktop-id">astroimpact.desktop</launchable>
++  <developer id="com.voxdsp">
++    <name>James William Fletcher</name>
++  </developer>
+ 	<releases>
+ 		<release version="1.0" date="2023-10-31" />
+ 	</releases>
+ 	<content_rating type="oars-1.0" />
+-</application>
+\ No newline at end of file
++</component>
+--
+libgit2 1.7.2
+

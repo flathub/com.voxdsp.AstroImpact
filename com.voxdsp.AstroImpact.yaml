@@ -1,6 +1,6 @@
 app-id: com.voxdsp.AstroImpact
 runtime: org.freedesktop.Platform
-runtime-version: '23.08'
+runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 command: astroimpact
 rename-icon: astroimpact
@@ -26,16 +26,19 @@ modules:
       - type: git
         url: https://github.com/glfw/glfw.git
         commit: 3eaf1255b29fdf5c2895856c7be7d7185ef2b241
+
   - name: astroimpact
     buildsystem: simple
     build-commands:
       - make
       - cp bin/fat astroimpact
       - install -Dm 0755 astroimpact -t ${FLATPAK_DEST}/bin
-      - install -Dm 0644 flatpak/astroimpact.desktop ${FLATPAK_DEST}/share/applications/astroimpact.desktop
-      - install -Dm 0644 flatpak/astroimpact.appdata.xml ${FLATPAK_DEST}/share/metainfo/astroimpact.appdata.xml
-      - install -Dm 0644 flatpak/astroimpact.png ${FLATPAK_DEST}/share/icons/hicolor/128x128/apps/astroimpact.png
+      - install -Dm 0644 flat/astroimpact.desktop -t ${FLATPAK_DEST}/share/applications/
+      - install -Dm 0644 flat/astroimpact.png -t ${FLATPAK_DEST}/share/icons/hicolor/128x128/apps/
+      - install -Dm 0644 flat/astroimpact.appdata.xml -t ${FLATPAK_DEST}/share/metainfo/
     sources:
       - type: git
-        url: https://notabug.org/AstroImpact/AstroImpact.git
-        commit: 7b1240b50e228a7bccc970719f203b91c94d072f
+        url: https://github.com/mrbid/AstroImpact.git
+        commit: a658138e6fe863203b5cf61ce8161d7338708039
+      - type: patch
+        path: fix-appdata.patch
